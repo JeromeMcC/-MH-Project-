@@ -1,0 +1,12 @@
+.title-bar{
+    background-color: rgba(1, 1, 1, 0.584);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Fjalla One';
+    color:white;
+    font-size: 100px;
+    background-image: url(images/header.jpg);
+}
