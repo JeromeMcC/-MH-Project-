@@ -1,3 +1,4 @@
+
 .title-bar{
     background-color: rgba(1, 1, 1, 0.584);
 }
@@ -9,4 +10,29 @@
     color:white;
     font-size: 100px;
     background-image: url(images/header.jpg);
+    background-position: center;
+}
+.search-bar {
+    position:relative;  
+left:10%;
+top:center;
+width:120%;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px; 
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px; 
+}
+.button{
+position: relative;
+left:65%;
+top:center;
+height: 100%;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px; 
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px; 
+}
+.card{
+    background:rgb(254, 212, 212);
+    border: 1px solid lightslategray;
 }
