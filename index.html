@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-float.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-rtl.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-prototype.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Nerd Reads</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-float.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-rtl.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-prototype.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Nerd Reads</title>
 </head>
-    <script src="script.js"></script>
-    <h1 class="header"> Nerd Reads</h1>
-    <nav class="title-bar">
-      <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-      <div class="title-bar-title">Menu</div>
-       <div class="top-bar-left">
-      <ul class="menu">
-        <li><input class="search-bar" type="search" placeholder="Search"></li>
-        <li><button type="button" class="button">Search</button></li>
-      </ul>
+
+<h1 class="header"> Nerd Reads</h1>
+<nav class="title-bar">
+  <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+  <div class="title-bar-title">Menu</div>
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li><input class="search-bar" type="search" placeholder="Search" id='textVal'></li>
+      <li><button type="button" class="button" id='searchBar'>Search</button></li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+      <div class="cell">
+        <div class="card">
+          <img src="images/header.jpg">
+          <div class="card-section">
+            <h4>This is a row of cards.</h4>
+            <p>This row of cards is embedded in an X-Y Block Grid.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="card">
+          <img src="images/manga.jpg">
+          <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>It has an easy to override visual style, and is appropriately subdued.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="card">
+          <img src="images/header.jpg">
+          <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>It has an easy to override visual style, and is appropriately subdued.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </nav>
-    <body>
-      <div class="grid-container">
-        <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-          <div class="cell">
-            <div class="card">
-              <img src="images/header.jpg">
-              <div class="card-section">
-              <h4>This is a row of cards.</h4>
-                <p>This row of cards is embedded in an X-Y Block Grid.</p>
-              </div>
-            </div>
-          </div>
-          <div class="cell">
-            <div class="card">
-              <img src="images/manga.jpg">
-              <div class="card-section">
-                <h4>This is a card.</h4>
-                <p>It has an easy to override visual style, and is appropriately subdued.</p>
-              </div>
-            </div>
-          </div>
-          <div class="cell">
-            <div class="card">
-              <img src="images/header.jpg">
-              <div class="card-section">
-                <h4>This is a card.</h4>
-                <p>It has an easy to override visual style, and is appropriately subdued.</p>
-              </div>
-            </div>
-          </div>
+  </div>
+  <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+    <div class="cell">
+      <div class="card">
+        <img src="images/manga.jpg">
+        <div class="card-section">
+          <h4>This is a row of cards.</h4>
+          <p>This row of cards is embedded in an Flex Block Grid.</p>
         </div>
       </div>
-      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-        <div class="cell">
-          <div class="card">
-            <img src="images/manga.jpg">
-            <div class="card-section">
-              <h4>This is a row of cards.</h4>
-              <p>This row of cards is embedded in an Flex Block Grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="cell">
-          <div class="card">
-            <img src="images/header.jpg">
-            <div class="card-section">
-              <h4>This is a card.</h4>
-              <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            </div>
-          </div>
-        </div>
-        <div class="cell">
-          <div class="card">
-            <img src="images/manga.jpg">
-            <div class="card-section">
-              <h4>This is a card.</h4>
-              <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            </div>
-          </div>
+    </div>
+    <div class="cell">
+      <div class="card">
+        <img src="images/header.jpg">
+        <div class="card-section">
+          <h4>This is a card.</h4>
+          <p>It has an easy to override visual style, and is appropriately subdued.</p>
         </div>
       </div>
-    </body>
+    </div>
+    <div class="cell">
+      <div class="card">
+        <img src="images/manga.jpg">
+        <div class="card-section">
+          <h4>This is a card.</h4>
+          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
