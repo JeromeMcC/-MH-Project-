@@ -14,13 +14,13 @@
     href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-prototype.min.css"
     crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <title>Nerd Reads</title>
+  <title>Game Query</title>
 </head>
 
-<h1 class="header"> Nerd Reads</h1>
+<h1 class="header"> Game Query</h1>
 <nav class="title-bar">
   <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-  <div class="title-bar-title">Menu</div>
+  <div class="title-bar-title"></div>
   <div class="top-bar-left">
     <ul class="menu">
       <li><input class="search-bar" type="search" placeholder="Search" id='textVal'></li>
@@ -30,64 +30,63 @@
 </nav>
 
 <body>
-  <div class="grid-container">
-    <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-      <div class="cell">
-        <div class="card">
-          <img src="images/header.jpg">
-          <div class="card-section">
-            <h4>This is a row of cards.</h4>
-            <p>This row of cards is embedded in an X-Y Block Grid.</p>
-          </div>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="card">
-          <img src="images/manga.jpg">
-          <div class="card-section">
-            <h4>This is a card.</h4>
-            <p>It has an easy to override visual style, and is appropriately subdued.</p>
-          </div>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="card">
-          <img src="images/header.jpg">
-          <div class="card-section">
-            <h4>This is a card.</h4>
-            <p>It has an easy to override visual style, and is appropriately subdued.</p>
-          </div>
-        </div>
-      </div>
+  <div class="row">
+    <div class="columns">
+      <h2>Table</h2>
+      <p>Yes its true that tables are not the sexiest things ever, but tables get the job done (for tabular data, of course). </p>
     </div>
   </div>
-  <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-    <div class="cell">
-      <div class="card">
-        <img src="images/manga.jpg">
-        <div class="card-section">
-          <h4>This is a row of cards.</h4>
-          <p>This row of cards is embedded in an Flex Block Grid.</p>
-        </div>
-      </div>
-    </div>
-    <div class="cell">
-      <div class="card">
-        <img src="images/header.jpg">
-        <div class="card-section">
-          <h4>This is a card.</h4>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        </div>
-      </div>
-    </div>
-    <div class="cell">
-      <div class="card">
-        <img src="images/manga.jpg">
-        <div class="card-section">
-          <h4>This is a card.</h4>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        </div>
-      </div>
+  
+  <div class="row">
+    <div class="columns">
+      <table>
+        <thead>
+          <tr>
+            <th width="200">Title</th>
+            <th>About</th>
+            <th width="150">Release Date</th>
+            <th width="150">Web Site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id= "title0"><span id ="Image0"></span></td>
+            <td id= "about0">This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+            <td id= 'rd0'>Content Goes Here</td>
+            <td id= >Content Goes Here</td>
+          </tr>
+          <tr>
+            <td id= "title1">Content Goes Here</td>
+            <td id= 'about1'>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+            <td id= 'rd1'>Content Goes Here</td>
+            <td>Content Goes Here</td>
+          </tr>
+          <tr>
+            <td id= "title2" >Content Goes Here</td>
+            <td id= 'about2'>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+            <td id = 'rd2' >Content Goes Here</td>
+            <td>Content Goes Here</td>
+          </tr>
+          <tr>
+            <td id= "title3" >Content Goes Here</td>
+            <td id= 'about3'>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+            <td id = 'rd3'>Content Goes Here</td>
+            <td>Content Goes Here</td>
+          </tr>
+          <tr>
+            <td id= "title4" >Content Goes Here</td>
+            <td id= 'about4'>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+            <td id= 'rd4'>Content Goes Here</td>
+            <td>Content Goes Here</td>
+          </tr>
+          <tr>
+            <td id= "title5" >Content Goes Here</td>
+            <td id= 'about5'>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+            <td id= 'rd5'>Content Goes Here</td>
+            <td>Content Goes Here</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <script src="script.js"></script>
