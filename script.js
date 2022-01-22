@@ -49,13 +49,14 @@ searchBtn.addEventListener("click", function () {
 
                 var searchResults = data.results
                 //var searchResults2 = dataR.results
+                
                 let tableBody = document.createElement('tbody')
                 table.append(tableBody)
 
                 dyTable.append(table)
                 for (let i = 0; i < data.results.length; i++) {
                     var title = data.results[i].name
-                    //var image = data.results[i].image.original
+                    var image = data.results[i].image.original
                     var release = data.results[i].release_date
                     var about = data.results[i].description
                     //var esrb = dataR.results[i].esrb_rating
@@ -63,8 +64,8 @@ searchBtn.addEventListener("click", function () {
 
 
                     let tableBodyRow = document.createElement('tr')
-                    //let imageElData = document.createElement('img')
-                    //imageElData.src = image
+                    let imageElData = document.createElement('img')
+                    imageElData.src = image
                     let titleData = document.createElement('td')
                     titleData.innerText = title
                     let aboutData = document.createElement('td')
@@ -72,19 +73,12 @@ searchBtn.addEventListener("click", function () {
                     let releaseData = document.createElement('td')
                     releaseData.innerText = release
 
-                    tableBodyRow.append(//imageElData,
+                    tableBodyRow.append(imageElData,
                         titleData, aboutData, releaseData)
 
                     table.append(tableBodyRow)
 
 
-                    function w3_open() {
-                        document.getElementById("mySidebar").style.display = "block";
-                      }
-                      
-                      function w3_close() {
-                        document.getElementById("mySidebar").style.display = "none";
-                      }
 
 
 
@@ -93,16 +87,8 @@ searchBtn.addEventListener("click", function () {
 
 
 
-                    // var indexTitleEL = document.getElementById("title" + i)
-                    // var indexImageEl = document.getElementById("image" + i)
-                    // var indexAboutEL = document.getElementById("about" + i)
-                    // var indexReleaseEL = document.getElementById("rd" + i)
-                    // console.log(document.getElementById("image" + i))
 
-                    // indexTitleEL.innerHTML = title
-                    // indexAboutEL.innerHTML = about
-                    // indexReleaseEL.innerHTML = release
-                    // indexImageEl.src = image
+                                    
 
                 }
             })
