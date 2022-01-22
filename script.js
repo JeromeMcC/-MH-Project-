@@ -60,9 +60,8 @@ var textValue = document.getElementById("textVal").value
                     releaseData.innerText = release
 
                     tableBodyRow.append(imageElData,titleData, aboutData, releaseData)
-
+                //Radhikagit
                     table.append(tableBodyRow)
-                    
                     $(document).ready(function () {
                         $("tr:odd").css("background-color", "#b0c4de");
                         });
