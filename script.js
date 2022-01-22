@@ -38,6 +38,7 @@ var textValue = document.getElementById("textVal").value
 
                 var searchResults = data.results
                 //var searchResults2 = dataR.results
+                
                 let tableBody = document.createElement('tbody')
                 table.append(tableBody)
 
@@ -59,12 +60,18 @@ var textValue = document.getElementById("textVal").value
                     let releaseData = document.createElement('td')
                     releaseData.innerText = release
 
+                    tableBodyRow.append(imageElData,
+                        titleData, aboutData, releaseData)
+
+                    table.append(tableBodyRow)
+
                     tableBodyRow.append(imageElData,titleData, aboutData, releaseData)
                 //Radhikagit
                     table.append(tableBodyRow)
                     $(document).ready(function () {
                         $("tr:odd").css("background-color", "#b0c4de");
                         });
+
                 }
             })
     }
