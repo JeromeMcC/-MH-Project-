@@ -1,5 +1,3 @@
-
-
 var searchBtn = document.getElementById("searchBar")
 var textValue = document.getElementById("textVal").value
 var rawgApiData
@@ -18,10 +16,7 @@ searchBtn.addEventListener("click", function () {
                 return response.json();
             })
             .then(function (data) {
-                console.log(data)
-
-                fetch(apiresult)
-
+                    fetch(apiresult)
                     .then(function (responseR) {
                         return responseR.json();
                     })
@@ -95,14 +90,12 @@ searchBtn.addEventListener("click", function () {
 
                             table.append(tableBodyRow)
                         }
-
+                        
+                        $(document).ready(function () {
+                            $("tr:odd").css("background-color", "#b0c4de");
+                            });
                     })
             })
-
-
-
-
-
     }
     gameSearch()
 
