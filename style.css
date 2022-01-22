@@ -37,3 +37,9 @@ border-bottom-left-radius: 5px;
     background:rgb(254, 212, 212);
     border: 1px solid lightslategray;
 }
+
+.dyTable
+{
+    text-align: center;
+    border : 0.1rem;
+}

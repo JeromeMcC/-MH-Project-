@@ -3,6 +3,7 @@ var textValue = document.getElementById("textVal").value
 
     searchBtn.addEventListener("click", function () {
     textValue = document.getElementById("textVal").value
+    
    
     var apiresult = "https://api.rawg.io/api/games?key=80c529d7faab43a7a202e7d82091d705&search_precise=true&search=" + textValue
 
@@ -60,7 +61,7 @@ var textValue = document.getElementById("textVal").value
                     releaseData.innerText = release
 
                     tableBodyRow.append(imageElData,titleData, aboutData, releaseData)
-                //Radhikagit
+              
                     table.append(tableBodyRow)
                     $(document).ready(function () {
                         $("tr:odd").css("background-color", "#b0c4de");
@@ -69,5 +70,5 @@ var textValue = document.getElementById("textVal").value
             })
     }
     gameSearch()
-
+   
 })
