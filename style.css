@@ -10,11 +10,10 @@
     color:white;
     font-size: 100px;
     background-image: url(images/header2.jpg);
-    background-position:;
     background-size:cover;
 }
 .search-bar {
-    position:relative;  
+position:relative;  
 left:10%;
 top:center;
 width:120%;
