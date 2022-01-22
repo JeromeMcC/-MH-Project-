@@ -16,12 +16,13 @@ searchBtn.addEventListener("click", function () {
                 return response.json();
             })
             .then(function (data) {
+                
                     fetch(apiresult)
                     .then(function (responseR) {
                         return responseR.json();
                     })
                     .then(function (dataR) {
-                        console.log(dataR)
+                       
                         rawgApiData = dataR
 
 
