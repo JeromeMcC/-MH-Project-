@@ -1,12 +1,9 @@
-
-
 var searchBtn = document.getElementById("searchBar")
 var textValue = document.getElementById("textVal").value
 
-searchBtn.addEventListener("click", function () {
+    searchBtn.addEventListener("click", function () {
     textValue = document.getElementById("textVal").value
-    console.log(textValue)
-
+   
     var apiresult = "https://api.rawg.io/api/games?key=80c529d7faab43a7a202e7d82091d705&search_precise=true&search=" + textValue
 
     function gameSearch() {
@@ -19,21 +16,13 @@ searchBtn.addEventListener("click", function () {
                 return response.json();
             })
             .then(function (data) {
-                console.log(data)
-
-                fetch(apiresult)
-
+                    fetch(apiresult)
                     .then(function (responseR) {
                         return responseR.json();
                     })
                     .then(function (dataR) {
-                        console.log(dataR)
-
-
                     })
-                //create the table 
-
-
+                //create the table dynamically
                 var dyTable = document.querySelector("div.dyTable")
                 let tableHeaders = ["Image", "Title", "About", "Release date", "ESRB"]
                 let table = document.createElement('table');
@@ -55,16 +44,14 @@ searchBtn.addEventListener("click", function () {
                 dyTable.append(table)
                 for (let i = 0; i < data.results.length; i++) {
                     var title = data.results[i].name
-                    //var image = data.results[i].image.original
+                    var image = data.results[i].image.original
                     var release = data.results[i].release_date
                     var about = data.results[i].description
                     //var esrb = dataR.results[i].esrb_rating
-                    console.log(release)
-
-
+                   
                     let tableBodyRow = document.createElement('tr')
-                    //let imageElData = document.createElement('img')
-                    //imageElData.src = image
+                    let imageElData = document.createElement('img')
+                    imageElData.src = image
                     let titleData = document.createElement('td')
                     titleData.innerText = title
                     let aboutData = document.createElement('td')
@@ -72,39 +59,14 @@ searchBtn.addEventListener("click", function () {
                     let releaseData = document.createElement('td')
                     releaseData.innerText = release
 
-                    tableBodyRow.append(//imageElData,
-                        titleData, aboutData, releaseData)
-
+                    tableBodyRow.append(imageElData,titleData, aboutData, releaseData)
+                //Radhikagit
                     table.append(tableBodyRow)
-
-
-
-
-
-
-
-
-
-
-
-                    // var indexTitleEL = document.getElementById("title" + i)
-                    // var indexImageEl = document.getElementById("image" + i)
-                    // var indexAboutEL = document.getElementById("about" + i)
-                    // var indexReleaseEL = document.getElementById("rd" + i)
-                    // console.log(document.getElementById("image" + i))
-
-                    // indexTitleEL.innerHTML = title
-                    // indexAboutEL.innerHTML = about
-                    // indexReleaseEL.innerHTML = release
-                    // indexImageEl.src = image
-
+                    $(document).ready(function () {
+                        $("tr:odd").css("background-color", "#b0c4de");
+                        });
                 }
             })
-
-
-
-
-
     }
     gameSearch()
 
