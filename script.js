@@ -1,7 +1,7 @@
 var searchBtn = document.getElementById("searchBar")
 var textValue = document.getElementById("textVal").value
-
-    searchBtn.addEventListener("click", function () {
+var rawgApiData
+searchBtn.addEventListener("click", function () {
     textValue = document.getElementById("textVal").value
     
    
@@ -17,11 +17,82 @@ var textValue = document.getElementById("textVal").value
                 return response.json();
             })
             .then(function (data) {
+                
                     fetch(apiresult)
                     .then(function (responseR) {
                         return responseR.json();
                     })
                     .then(function (dataR) {
+                       
+                        rawgApiData = dataR
+
+
+                        //create the table 
+
+
+
+                        var dyTable = document.querySelector("div.dyTable")
+                        let tableHeaders = ["Image", "Title", "About", "Release date", "ESRB"]
+                        let table = document.createElement('table');
+                        let tableHead = document.createElement("thead")
+                        let tableHeadRow = document.createElement("tr")
+                        tableHeaders.forEach(function (header) {
+                            let infoHeader = document.createElement('th')
+                            infoHeader.innerText = header
+                            tableHeadRow.append(infoHeader)
+                        })
+                        tableHead.append(tableHeadRow)
+                        table.append(tableHead)
+
+                        var searchResults = data.results
+                        var searchResults2 = rawgApiData.results
+
+                        let tableBody = document.createElement('tbody')
+                        table.append(tableBody)
+
+                        dyTable.innerHTML = ""
+                        dyTable.append(table)
+
+                        for (let i = 0; i < data.results.length; i++) {
+                            var title = data.results[i].name
+
+                            if (data.results[i].image !== null) {
+
+                                var image = data.results[i].image.original
+                            }
+                            else {
+                                var image = "images/NPA.png"
+                            }
+
+                            var release = data.results[i].release_date
+                            var about = data.results[i].description
+
+                            if (rawgApiData.results[i].esrb_rating === null) { esrb = "" }
+                            else { var esrb = rawgApiData.results[i].esrb_rating.name }
+                            console.log(release)
+
+
+                            let tableBodyRow = document.createElement('tr')
+                            let imageElData = document.createElement('img')
+                            imageElData.src = image
+                            let titleData = document.createElement('td')
+                            titleData.innerText = title
+                            let aboutData = document.createElement('td')
+                            aboutData.innerText = about
+                            let releaseData = document.createElement('td')
+                            releaseData.innerText = release
+                            let esrbData = document.createElement('td')
+                            esrbData.innerText = esrb
+
+                            tableBodyRow.append(imageElData,
+                                titleData, aboutData, releaseData, esrbData)
+
+                            table.append(tableBodyRow)
+                        }
+                        
+                        $(document).ready(function () {
+                            $("tr:odd").css("background-color", "#b0c4de");
+                            });
                     })
                 //create the table dynamically
                 var dyTable = document.querySelector("div.dyTable")

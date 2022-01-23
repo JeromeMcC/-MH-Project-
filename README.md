@@ -20,6 +20,7 @@ javascript
 Jquery
 gamespot and rawg apis
 
+![Project Mock-up image.](./images/projectMockup.png)
 Links
 -----
 https://jeromemcc.github.io/-MH-Project-/
