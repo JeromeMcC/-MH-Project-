@@ -13,47 +13,63 @@
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-prototype.min.css"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="style.css">
   <title>Game Query</title>
 </head>
 
 <h1 class="header"> Game Query</h1>
-<nav class="title-bar">
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown</button>
-    <div class="dropdown-content">
-    <a href="https://www.gamespot.com/news/">News</a>
-    <a href="https://www.gamestop.com/?gclid=CjwKCAiA866PBhAYEiwANkIneAcfdIqPKc2yPRYqeUcHxGQTbz0WX8WHOlC5B5JHEgns_ccD9b_fqRoC8dIQAvD_BwE&gclsrc=aw.ds">Purchase</a>
-    </div>
-  </div>
-  
-  
-  
-  <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-  <div class="title-bar-title"></div>
-  <div class="top-bar-left">
-    <ul class="menu">
-      <li><input class="search-bar" type="search" placeholder="Search" id='textVal'></li>
-      <li><button type="button" class="button" id='searchBar'>Search</button></li>
+<div>
+
+  <nav id="nav-wrap">
+    <ul>
+      <li>
+        <div class="menu-icon-btn">
+          <i class="fa fa-bars"></i>
+        </div>
+<ul class="main-menu-container">
+          <li><a href="#">Home</a></li>
+          <li><a href="https://www.gamespot.com/news/">News</a>
+
+          </li>
+
+          <li><a
+              href="https://www.gamestop.com/?gclid=CjwKCAiA866PBhAYEiwANkIneAcfdIqPKc2yPRYqeUcHxGQTbz0WX8WHOlC5B5JHEgns_ccD9b_fqRoC8dIQAvD_BwE&gclsrc=aw.ds">Purchase</a>
+          </li>
+
+        </ul>
+      </li>
     </ul>
-  </div>
-</nav>
-
-<body>
-  <div class="row" >
-    <div class="columns dyTable stripes">
-
+    <div class="search-container">
+      <div class="search-icon-btn">
+        <i id="searchBar" class="fa fa-search"></i>
+      </div>
+      <div class="search-input">
+        <input id="textVal" type="search" class="search-bar" placeholder="Search...">
+      </div>
     </div>
+  </nav>
+</div>
+<body>
+  <div>
+    <div class="columns dyTable stripes">
+    </div>
+   
   </div>
 
   <div class="row">
     <div class="columns">
-      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/foundation.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-      <script src="script.js"></script>      
+      <script src="script.js"></script>
 
-  <script src="script.js"></script>
+      <script src="script.js"></script>
 </body>
 
 </html>
