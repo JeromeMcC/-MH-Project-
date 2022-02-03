@@ -3,7 +3,6 @@ var textValue = document.getElementById("textVal").value
 var rawgApiData
 searchBtn.addEventListener("click", function () {
     textValue = document.getElementById("textVal").value
-    
    
     var apiresult = "https://api.rawg.io/api/games?key=80c529d7faab43a7a202e7d82091d705&search_precise=true&search=" + textValue
 
@@ -17,7 +16,7 @@ searchBtn.addEventListener("click", function () {
                 return response.json();
             })
             .then(function (data) {
-                
+                console.log(data)
                     fetch(apiresult)
                     .then(function (responseR) {
                         return responseR.json();
@@ -25,12 +24,7 @@ searchBtn.addEventListener("click", function () {
                     .then(function (dataR) {
                        
                         rawgApiData = dataR
-
-
-                        //create the table 
-
-
-
+                        //create the table
                         var dyTable = document.querySelector("div.dyTable")
                         let tableHeaders = ["Image", "Title", "About", "Release date", "ESRB"]
                         let table = document.createElement('table');
@@ -67,10 +61,9 @@ searchBtn.addEventListener("click", function () {
                             var release = data.results[i].release_date
                             var about = data.results[i].description
 
-                            if (rawgApiData.results[i].esrb_rating === null) { esrb = "" }
+                            if (rawgApiData.results[i].esrb_rating === null) { esrb = " " }
                             else { var esrb = rawgApiData.results[i].esrb_rating.name }
-                            console.log(release)
-
+                           
 
                             let tableBodyRow = document.createElement('tr')
                             let imageElData = document.createElement('img')
@@ -94,50 +87,7 @@ searchBtn.addEventListener("click", function () {
                             $("tr:odd").css("background-color", "#b0c4de");
                             });
                     })
-                //create the table dynamically
-                var dyTable = document.querySelector("div.dyTable")
-                let tableHeaders = ["Image", "Title", "About", "Release date", "ESRB"]
-                let table = document.createElement('table');
-                let tableHead = document.createElement("thead")
-                let tableHeadRow = document.createElement("tr")
-                tableHeaders.forEach(function (header) {
-                    let infoHeader = document.createElement('th')
-                    infoHeader.innerText = header
-                    tableHeadRow.append(infoHeader)
-                })
-                tableHead.append(tableHeadRow)
-                table.append(tableHead)
-
-                var searchResults = data.results
-                //var searchResults2 = dataR.results
-                let tableBody = document.createElement('tbody')
-                table.append(tableBody)
-
-                dyTable.append(table)
-                for (let i = 0; i < data.results.length; i++) {
-                    var title = data.results[i].name
-                    var image = data.results[i].image.original
-                    var release = data.results[i].release_date
-                    var about = data.results[i].description
-                    //var esrb = dataR.results[i].esrb_rating
-                   
-                    let tableBodyRow = document.createElement('tr')
-                    let imageElData = document.createElement('img')
-                    imageElData.src = image
-                    let titleData = document.createElement('td')
-                    titleData.innerText = title
-                    let aboutData = document.createElement('td')
-                    aboutData.innerText = about
-                    let releaseData = document.createElement('td')
-                    releaseData.innerText = release
-
-                    tableBodyRow.append(imageElData,titleData, aboutData, releaseData)
-              
-                    table.append(tableBodyRow)
-                    $(document).ready(function () {
-                        $("tr:odd").css("background-color", "#b0c4de");
-                        });
-                }
+       
             })
     }
     gameSearch()
