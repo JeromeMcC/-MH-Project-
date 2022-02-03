@@ -10,6 +10,9 @@ user story
 
 When you enter a game name in the search box it displays the results related to that game.
 
+
+
+
 Technologies
 ------------
 Foundation framework

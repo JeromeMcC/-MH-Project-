@@ -3,7 +3,7 @@ var textValue = document.getElementById("textVal").value
 var rawgApiData
 searchBtn.addEventListener("click", function () {
     textValue = document.getElementById("textVal").value
-
+   
     var apiresult = "https://api.rawg.io/api/games?key=80c529d7faab43a7a202e7d82091d705&search_precise=true&search=" + textValue
 
     function gameSearch() {
@@ -16,7 +16,7 @@ searchBtn.addEventListener("click", function () {
                 return response.json();
             })
             .then(function (data) {
-                
+                console.log(data)
                     fetch(apiresult)
                     .then(function (responseR) {
                         return responseR.json();
@@ -24,12 +24,7 @@ searchBtn.addEventListener("click", function () {
                     .then(function (dataR) {
                        
                         rawgApiData = dataR
-
-
-                        //create the table 
-
-
-
+                        //create the table
                         var dyTable = document.querySelector("div.dyTable")
                         let tableHeaders = ["Image", "Title", "About", "Release date", "ESRB"]
                         let table = document.createElement('table');
@@ -52,9 +47,6 @@ searchBtn.addEventListener("click", function () {
                         dyTable.innerHTML = ""
                         dyTable.append(table)
 
-
-
-
                         for (let i = 0; i < data.results.length; i++) {
                             var title = data.results[i].name
 
@@ -69,10 +61,9 @@ searchBtn.addEventListener("click", function () {
                             var release = data.results[i].release_date
                             var about = data.results[i].description
 
-                            if (rawgApiData.results[i].esrb_rating === null) { esrb = "" }
+                            if (rawgApiData.results[i].esrb_rating === null) { esrb = " " }
                             else { var esrb = rawgApiData.results[i].esrb_rating.name }
-                            console.log(release)
-
+                           
 
                             let tableBodyRow = document.createElement('tr')
                             let imageElData = document.createElement('img')
@@ -96,8 +87,9 @@ searchBtn.addEventListener("click", function () {
                             $("tr:odd").css("background-color", "#b0c4de");
                             });
                     })
+       
             })
     }
     gameSearch()
-
+   
 })
